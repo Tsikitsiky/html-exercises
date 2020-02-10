@@ -19,17 +19,18 @@
         <p>Please log in before accessing our website</p>
       </header>
       <form action="/log-in" method="POST">
-        <label for="username"><b>Username</b>:</label>
-        <input type="text"  id="username" name="The user's email address">
+        <label for="username"><b>E-mail address</b>:<br>
+        <input type="email"  id="username" name="username" required>
+      </label>
         <p> </p>
-        <label for="password"><b>Password</b>:</label>
-        <input type="password" id="password" name="The user's password">
+        <label for="password"><b>Password</b>:<br>
+        <input type="password" id="password" name="password" required>
+      </label>
         <p> </p>
-        <input type="submit" value="Log in">
+        <input type="submit" value="Log sin">
+        <input type="checkbox">
 
         </form>
-
-      <!-- Add your log in form here -->
 
     </main>
   </body>
