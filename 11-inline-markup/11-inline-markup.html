@@ -18,21 +18,21 @@
 
       <!-- In this example, the 'Wait!' needs stressing when vocalised -->
       <p>
-       <strong><em>"Wait!"</em></strong> shouted Jesse.
+       <q><strong><em>Wait</em></strong>!</q> shouted Jesse.
       </p>
 
       <hr>
 
       <!-- It's a good idea to tell a computer how to read a datetime: -->
       <p>
-        The time is now <time datetime="2020-02-12 2:00"></time> 2pm, on Wednesay the 12th of February, 2020.
+        The time is now <time datetime="2020-02-12T2:00:00+03:00"></time> 2pm, on Wednesay the 12th of February, 2020.
       </p>
 <!-- I don't really understand how the time element works-->
       <hr>
 
       <!-- What do 'H' and 'O' mean here? -->
       <p>
-        The elements H and O, bond as H<sub>2</sub>0, or water (as it is colloquaially known).
+        The elements <abbr title="Hydrogen">H</abbr> and <abbr title="Oxygen">O</abbr>, bond as H<sub>2</sub>0, or <dfn>water</dfn> (as it is colloquaially known).
       </p>
 
       <hr>
@@ -41,8 +41,8 @@
       <p>
         Editor's Notes:<br>
 
-        Please use <kbd>CTRL+B</kbd> to bold this word: <b>Critical</b><br>
-        Please use <kbd>CTRL+I</kbd> to italicise this word: <i>Doubtful</i><br>
+        Please use <kbd>CTRL</kbd> + <kbd>B</kbd> to bold this word: <b>Critical</b><br>
+        Please use <kbd>CTRL</kbd> + <kbd>I</kbd> to italicise this word: <i>Doubtful</i><br>
 
         Please underline this word: <u>Thinking</u><br>
         Please put a line through this word:<s> Assuming</s><br>
@@ -55,24 +55,25 @@
 
       <!-- We can do the same with samples of code, even maintaining the whitespace: -->
       <p>
-        "Woah! 'that' was unexpected!" exclaimed Keith.<br>
+        <q><em>Woah</em>! <code>that</code> was unexpected!</q> exclaimed Keith.<br>
         Curiously, Jesse looked at the output on Keith's screen and it said:<br>
-
-          <q>Unexpected value for argument 'that'
-            - in function <code>clickHandler</code>, line 12
-            - called from function <code>anonymous</code>, line 34</q>
+  <pre>
+  Unexpected value for argument <code>'that'</code>
+  - in function <code>clickHandler</code>, line 12
+  - called from function anonymous,line 34
+  </pre>
       </p>
 
       <hr>
 
       <!-- We can add helpful markup to highlight words -->
       <p>
-        Your search term: 'Helicopter' was found in the following documents:
+        Your search term<mark>'Helicopter'</mark> was found in the following documents:
       </p>
       <ul>
         <li>
           <a href="#bell-222">Bell 222</a>:<br>
-          The <mark>Model 222</mark> is a helicopter made by <mark> Bell Helicopter Corporation</mark>.
+          The Model 222 is a <mark>helicopter</mark> made by Bell <mark>Helicopter</mark> Corporation.
         </li>
       </ul>
 
