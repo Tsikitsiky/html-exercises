@@ -24,6 +24,14 @@
             - "About us" links to "/about"
             - "Contact us" links to "/contact"
         -->
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Our services</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/contact">Contact us</a></li>
+          </ul>
+        </nav>
       </section>
 
       <section>
@@ -41,8 +49,65 @@
               - Prefer to not disclose, "na"
             - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
         -->
+        <form action="/profile/save" method="POST">
+          <p>
+            <label>
+              First name:
+              <br>
+              <input type="text" name="profile_first_name" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Family name:
+              <br>
+              <input type="text" name="profile_family_name" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Email address:
+              <br>
+              <input type="email" name="username" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Phone number:
+              <br>
+              <input type="tel" name="phone">
+            </label>
+          </p>
+            Gender:
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="gender" value="m">Male
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="gender" value="f">Female
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="gender" value="na">Prefer to not disclose
+                </label>
+              </li>
+            </ul>
+          <p>
+            <label>
+              Photo:
+              <br>
+              <input type="file" accept=".png, .jpg, .WebP" />
+            </label>
+          </p>
+          <div>
+            <button type="submit" name="a_profile_update_form" value="">Save</button>
+          </div>
+        </form>
       </section>
-
       <section>
         <h2>An excerpt</h2>
         <!--
@@ -53,7 +118,18 @@
           "That's right!" I'll say. "Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it."
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
-        -->
+        -->An excerpt from <q>The story of your life</q> written by Ted Chiang:
+        <blockquote>
+          <p>
+            <q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say bitterly, dragging the vacuum cleaner out of the closet.
+          </p>
+          <p>
+           <q>That's right!</q> I'll say. <q>years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
+          </p>
+          <p>
+            <q>If you weren't my mother, this would be illegal,</q> you'll say, seething as you unwind the power cord and plug it into the wall outlet.
+          </p>
+        </blockquote>
       </section>
 
       <section>
@@ -74,6 +150,39 @@
 
           Please provide a summary of the student's information.
         -->
+        <table style="border: 1px solid ;">
+          <caption>
+            Table of four students proving their ages, weights and heights.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" id="header_name">Name</th>
+              <th scope="col" id="header_age">Age</th>
+              <th scope="col" id="header_weight">Weight</th>
+              <th scope="col" id="header_height">Height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th headers="header_name" scope="row" id="row_fred">Fred</th>
+              <td headers="row_fred header_age">23</td>
+              <td headers="row_fred header_weight">74kg</td>
+              <td headers="row_fred header_height">182cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_anne">Anne</th>
+              <td headers="row_anne header_age">26</td>
+              <td headers="row_anne header_weight">56kg</td>
+              <td headers="row_anne header_height">173cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_judith">Judith</th>
+              <td headers="row_judith header_age">19</td>
+              <td headers="row_judith header_weight">51kg</td>
+              <td headers="row_judith header_height">168cm</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section>
@@ -111,6 +220,31 @@
             Excerpt:
               Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
         -->
+        <header>
+          <h3> Research page</h3>
+          <p> Two results found for <q>critical thinking</q>:</p>
+          <p>
+            <label>
+              Search:
+              <br>
+              <input type="search" name="search" value="critical thinking">
+            </label>
+          </p>
+          <a href="/search">Search again</a>
+          <ul>
+            <li>
+
+              <a href=" https://en.wikipedia.org/wiki/Critical_thinking"><h4>"Wikipedia: Critical Thinking"</h4></a>
+                According to Ennis, “Critical thinking is the intellectually disciplined process of actively and skillfully conceptualizing, applying, analyzing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action.
+            </li>
+            <li>
+
+            <a href="https://www.skillsyouneed.com/learn/critical-thinking.html"><h4>"Critical Thinking | SkillsYouNeed"</h4></a>
+              Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
+            </li>
+          </ul>
+        </header>
+
       </section>
       <section>
         <h2>A definition</h2>
@@ -118,6 +252,28 @@
           6. Create the HTML necessary for the image `markup.png` in this folder.
           It is a definition of the word 'Markup'.
         -->
+        <h3>markup</h3>
+        <p><span style="color: grey;"> /'m&#593;:k&#652;p/</span></p>
+          <h5><em>noun</em></h5>
+        <span style="color:grey;">noun: <b>markup</b>; plural noun: <b>markups</b>; plural noun: <b>mark-ups</b></span>
+        <ol>
+          <li>
+             the amount added to the cost price of goods to cover overheads and profit
+             <br>
+             <span style="color:grey;">"a mark of 50 per cent"</span>
+          </li>
+          <li>
+            the process or result of correcting text in preparation for printing.
+          </li>
+          <li>
+            <span style="background-color: gainsboro;"> COMPUTING</span>
+            <br>
+            a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictacte how they should be displayed.
+            <br>
+            <span style="color:grey;">"markup languages"</span>
+          </li>
+        </ol>
+
         <img src="markup.png" alt="There are three definitions for the word 'Markup'">
       </section>
 
