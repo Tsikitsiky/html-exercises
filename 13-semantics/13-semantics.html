@@ -49,7 +49,10 @@
               - Prefer to not disclose, "na"
             - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
         -->
-        <form action="/profile/save" method="POST">
+        <form
+        action="/profile/save"
+        method="POST"
+        enctype="multipart/form-data">
           <p>
             <label>
               First name:
@@ -100,7 +103,7 @@
             <label>
               Photo:
               <br>
-              <input type="file" name="profile_photo" accept=".png, .jpg, .WebP" />
+              <input type="file" name="profile_photo" accept="image/png, image/jpg, image/WebP">
             </label>
           </p>
           <div>
@@ -118,7 +121,7 @@
           "That's right!" I'll say. "Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it."
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
-        -->An excerpt from <q>The story of your life</q> written by Ted Chiang:
+        -->
         <blockquote>
           <p>
             <q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say bitterly, dragging the vacuum cleaner out of the closet.
@@ -128,10 +131,11 @@
           </p>
           <p>
             <q>If you weren't my mother, this would be illegal,</q> you'll say, seething as you unwind the power cord and plug it into the wall outlet.
-          </p>
+          <footer>
+            </p>From Ted Chiang in the <cite>Thre story of your life</cite>
+          </footer>
         </blockquote>
       </section>
-
       <section>
         <h2>A table</h2>
         <!--
